@@ -562,6 +562,64 @@ function compare(a,b){
 
 console.log(numbers.sort(compare));
 
+//'Opel' degeri dizinin bir elemani midir
+
+console.log(cars.indexOf('Opel'));
+console.log(cars.includes('Opel'));
+
+//var str = "Chevrolet, Dacia";
+//ifadesini diziye ceviriniz
+var str = "Chevrolet, Dacia";
+var arr2 = str.split(',');
+console.log(arr2);
+
+//olusturulan 2 dizinin elemanlarini bir baska dizi ile birlestirin
+var arr3 = cars.concat(arr2);
+console.log(arr3);
+
+//olusturulan diziden son 2 elemani siliniz
+console.log(arr3.splice(4,2));
+console.log(arr3);
+
+// Asagida verilen elemanlari bir dizi icerisinde saklayiniz.
+
+//                  studentA : Yigit Bilgi 2010
+//                  studentB : Sena Turan 1999
+//                  studentC : Ahmet Turan 1998
+
+
+var studentA = ['Yigit', 'Bilgi',2010];
+var studentB = ['Sena', 'Turan',1999];
+var studentC = ['Ahmet', 'Turan',1998];
+
+var students = [studentA,studentB,studentC];
+console.log(students);
+
+console.log(students[0]);
+
+console.log(students[0][0]);
+console.log(students[0][1]);
+console.log(students[0][2]);
+
+console.log(students[1][0]);
+console.log(students[1][1]);
+console.log(students[1][2]);
+
+console.log(students[2][0]);
+console.log(students[2][1]);
+console.log(students[2][2]);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1213,45 +1213,86 @@
 
 
 
-function yasHesapla(dogumYili){
-    return  new Date().getFullYear()- dogumYili;
+// function yasHesapla(dogumYili){
+//     return  new Date().getFullYear()- dogumYili;
+// }
+
+
+// let val = yasHesapla(1983);
+
+// console.log(val);
+
+// let ageAda = yasHesapla(2012);
+// let ageYigit = yasHesapla(2010);
+// let ageCinar = yasHesapla(2017);
+
+
+// console.log(ageAda);
+// console.log(ageYigit);
+// console.log(ageCinar);
+
+
+
+// function emekliligeKacYilKaldi(dogumYili,isim){
+//     let yas = yasHesapla(dogumYili);
+//     let emeklilik = 65 - yas;
+
+//     if(emeklilik > 0){
+//         console.log(`${isim} Emekli olmaniza ${emeklilik} yil kaldi.`)
+//     }else{
+//         console.log(`${isim} zaten emekli oldunuz!!!`)
+//     }
+// }
+
+// emekliligeKacYilKaldi(2012,'Ada');
+// emekliligeKacYilKaldi(2010,'yigit');
+// emekliligeKacYilKaldi(1955,'selim');
+
+//Function Declarations
+
+// function sum(a,b){
+//     var c = a +b;
+//     return c; 
+// }
+
+// console.log(sum(10,20));
+
+
+
+//Function Expressions
+
+// const sum = function(a,b){    //Bu yapi son zamanlarda daha cok kullaniliyor
+//     if(typeof a === 'undefined'){ a=0; }
+//     if(typeof b === 'undefined'){ b=0; }
+    
+    
+//     var c = a + b;
+//     return c;
+// }
+
+const sum = function(a=0,b=0){    //ES6 ile gelen bir ozellik
+    
+    var c = a + b;
+    return c;
 }
 
+// function args(){
+//     console.log(arguments);
+// }
+// args(10,20,30);
 
-let val = yasHesapla(1983);
-
-console.log(val);
-
-let ageAda = yasHesapla(2012);
-let ageYigit = yasHesapla(2010);
-let ageCinar = yasHesapla(2017);
-
-
-console.log(ageAda);
-console.log(ageYigit);
-console.log(ageCinar);
-
-
-
-function emekliligeKacYilKaldi(dogumYili,isim){
-    let yas = yasHesapla(dogumYili);
-    let emeklilik = 65 - yas;
-
-    if(emeklilik > 0){
-        console.log(`${isim} Emekli olmaniza ${emeklilik} yil kaldi.`)
-    }else{
-        console.log(`${isim} zaten emekli oldunuz!!!`)
+function sumAll(){
+    var total = 0;
+    for(let i = 0;i<arguments.length;i++){
+        total+=arguments[i];
     }
+    return total;
 }
 
-emekliligeKacYilKaldi(2012,'Ada');
-emekliligeKacYilKaldi(2010,'yigit');
-emekliligeKacYilKaldi(1955,'selim');
-
-
-
-
-
+console.log(sum(20,30));
+console.log(sum(10));
+console.log(sum(10,30,40,50));
+console.log(sumAll(10,20,30,10));
 
 
 

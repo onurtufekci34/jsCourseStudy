@@ -1381,6 +1381,18 @@ function abc(){
 
 val = window.location;
 val = window.location.href;
+val = window.location.hostname;
+val = window.location.host;
+val = window.location.protocol;
+val = window.location.search;
+
+// window.location.href='https://github.com/onurtufekci34';
+// window.location.reload();
+
+//Navigator
+//val = window.navigator;
+
+val = document.getElementById('header');
 
 
  console.log(val);

@@ -1270,34 +1270,75 @@
 //     return c;
 // }
 
-const sum = function(a=0,b=0){    //ES6 ile gelen bir ozellik
+// const sum = function(a=0,b=0){    //ES6 ile gelen bir ozellik
     
-    var c = a + b;
-    return c;
-}
+//     var c = a + b;
+//     return c;
+// }
 
 // function args(){
 //     console.log(arguments);
 // }
 // args(10,20,30);
 
-function sumAll(){
-    var total = 0;
-    for(let i = 0;i<arguments.length;i++){
-        total+=arguments[i];
-    }
-    return total;
+// function sumAll(){
+//     var total = 0;
+//     for(let i = 0;i<arguments.length;i++){
+//         total+=arguments[i];
+//     }
+//     return total;
+// }
+
+// console.log(sum(20,30));
+// console.log(sum(10));
+// console.log(sum(10,30,40,50));
+// console.log(sumAll(10,20,30,10));
+
+
+//Demo Functions
+
+var hesapA = {
+    ad : 'Sena Turan',
+    hesapNo : '12345678',
+    bakiye : 2000,
+    ekHsesap : 1000
 }
 
-console.log(sum(20,30));
-console.log(sum(10));
-console.log(sum(10,30,40,50));
-console.log(sumAll(10,20,30,10));
+var hesapB = {
+    ad : 'Emel Turan',
+    hesapNo : '12356479',
+    bakiye : 3000,
+    ekHsesap : 2000
+}
+
+
+function paraCek(hesap,miktar){
+    hesap.bakiye = hesap.bakiye - miktar;
+    console.log(`Merhaba ${hesap.ad}`);
+
+    if(hesap.bakiye >= miktar){
+        console.log('paranizi alabilirsiniz');
+    }else {
+        var toplam = hesap.bakiye + hesap.ekHsesap;
+
+        if(toplam >= miktar){
+            if(confirm('ek hesabinizi kullanmak ister misiniz?')){
+                console.log('paranizi alabilirsiniz');
+            }else {
+                console.log(`${hesap.hesapNo} nolu hesabinizda ${miktar} bulunmamaktadir.`)
+            }
+        }else{
+            console.log('Uzgunuz bakiye yetersiz')
+        }
+    }
 
 
 
+}
 
-
+paraCek(hesapA,1000);
+paraCek(hesapA,1000);
+paraCek(hesapA,1000);
 
 
 

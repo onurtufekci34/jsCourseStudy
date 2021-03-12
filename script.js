@@ -1297,49 +1297,93 @@
 
 //Demo Functions
 
-var hesapA = {
-    ad : 'Sena Turan',
-    hesapNo : '12345678',
-    bakiye : 2000,
-    ekHsesap : 1000
-}
+// var hesapA = {
+//     ad : 'Sena Turan',
+//     hesapNo : '12345678',
+//     bakiye : 2000,
+//     ekHsesap : 1000
+// }
 
-var hesapB = {
-    ad : 'Emel Turan',
-    hesapNo : '12356479',
-    bakiye : 3000,
-    ekHsesap : 2000
-}
-
-
-function paraCek(hesap,miktar){
-    hesap.bakiye = hesap.bakiye - miktar;
-    console.log(`Merhaba ${hesap.ad}`);
-
-    if(hesap.bakiye >= miktar){
-        console.log('paranizi alabilirsiniz');
-    }else {
-        var toplam = hesap.bakiye + hesap.ekHsesap;
-
-        if(toplam >= miktar){
-            if(confirm('ek hesabinizi kullanmak ister misiniz?')){
-                console.log('paranizi alabilirsiniz');
-            }else {
-                console.log(`${hesap.hesapNo} nolu hesabinizda ${miktar} bulunmamaktadir.`)
-            }
-        }else{
-            console.log('Uzgunuz bakiye yetersiz')
-        }
-    }
+// var hesapB = {
+//     ad : 'Emel Turan',
+//     hesapNo : '12356479',
+//     bakiye : 3000,
+//     ekHsesap : 2000
+// }
 
 
+// function paraCek(hesap,miktar){
+//     hesap.bakiye = hesap.bakiye - miktar;
+//     console.log(`Merhaba ${hesap.ad}`);
 
-}
+//     if(hesap.bakiye >= miktar){
+//         console.log('paranizi alabilirsiniz');
+//     }else {
+//         var toplam = hesap.bakiye + hesap.ekHsesap;
 
-paraCek(hesapA,1000);
-paraCek(hesapA,1000);
-paraCek(hesapA,1000);
+//         if(toplam >= miktar){
+//             if(confirm('ek hesabinizi kullanmak ister misiniz?')){
+//                 console.log('paranizi alabilirsiniz');
+//             }else {
+//                 console.log(`${hesap.hesapNo} nolu hesabinizda ${miktar} bulunmamaktadir.`)
+//             }
+//         }else{
+//             console.log('Uzgunuz bakiye yetersiz')
+//         }
+//     }
 
+
+
+// }
+
+// paraCek(hesapA,1000);
+// paraCek(hesapA,1000);
+// paraCek(hesapA,1000);
+
+
+// Window Object
+
+let val;
+var a = 10;
+
+val = window;
+function abc(){
+    return 0;
+};
+
+//Alert 
+
+//alert('Merhaba');
+
+
+//prompt
+
+// var b = prompt('Bir sayi giriniz');
+// console.log(b);
+
+
+//confirm
+// val = confirm('Emin misiniz?')
+
+// if(val){
+//     console.log('ok');
+// }else{
+//     console.log('no');
+// }
+
+//scroll
+
+// val = window.scrollX;
+// val = window.scrollY;
+
+
+//location
+
+val = window.location;
+val = window.location.href;
+
+
+ console.log(val);
 
 
 

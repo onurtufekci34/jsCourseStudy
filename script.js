@@ -1405,15 +1405,15 @@
 
 // //**Global Scopes Heryerden ukasilabilir
 
- var ad = 'Cinar';
+//  var ad = 'Cinar';
 
- function logAd(){
-     var ad = 'Ada' //daha oncelikli bir degisken
-     console.log('function scope',ad);
- }
+//  function logAd(){
+//      var ad = 'Ada' //daha oncelikli bir degisken
+//      console.log('function scope',ad);
+//  }
 
-logAd();
-console.log(ad);
+// logAd();
+// console.log(ad);
 
 
 // //** Local Scopes
@@ -1422,31 +1422,67 @@ console.log(ad);
 //Bloklar yeni scope olusturmaz javascripte ozel bir durum
 
 //ES6 ile gelen let ve const block scope olusturur.
-console.log('********************');
-if(true){
-    var model = 'Opel';
-    let year = 2016;
-    const color = 'white'
-    console.log('block scope', model,year,color);
-}
+// console.log('********************');
+// if(true){
+//     var model = 'Opel';
+//     let year = 2016;
+//     const color = 'white'
+//     console.log('block scope', model,year,color);
+// }
 
 
-console.log(model);
-//console.log(color);
+// console.log(model);
+// //console.log(color);
 
 
-var i = 1;
+// var i = 1;
 
-for( let i = 0;i<10;i++){ //var kullanirsak sonda ki i 10 olur bu bir problem
-    console.log('i',i);
-}
-
-
-console.log(i);
+// for( let i = 0;i<10;i++){ //var kullanirsak sonda ki i 10 olur bu bir problem
+//     console.log('i',i);
+// }
 
 
+// console.log(i);
 
 
+// function multiplyAll(arr) {
+//     var product = 1;
+//     // Only change code below this line
+//     for(var i = 0;i<arr.length;i++){
+//       for(var j = 0;j<arr[i].length;j++){
+//         product*=arr[i][j];
+//       }
+//     }
+//     // Only change code above this line
+//     return product;
+//   }
+  
+//   console.log(multiplyAll([[1,2],[3,4],[5,6,7]]));
+  
+let val;
+
+val = window.document;
+val = document.all;
+val = document.all.length;
+val = document.all[10];
+val = document.head;
+val = document.body;
+val = document.anchors;
+val = document.URL;
+val = document.domain;
+val = document.images;
+val = document.title;
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].id;
+val = document.forms[0].method;
+val = document.forms[0].action;
+val = document.scripts;
+val = document.scripts[2];
+val = document.scripts[2].getAttribute('src');
+
+
+console.log(val);
 
 
 

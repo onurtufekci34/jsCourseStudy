@@ -1515,29 +1515,71 @@
 
 //document.querrySelector 
 
-console.log(document.querySelector('#header'));
-console.log(document.querySelector('.card-header'));
-console.log(document.querySelector('div'));
-console.log(document.querySelector('li').style.color='red');
-console.log(document.querySelector('li:last-child').style.color='blue');
-console.log(document.querySelector('li:nth-child(2)').style.color='yellow');
-console.log(document.querySelector('li:nth-child(3)').textContent='task item');
+// console.log(document.querySelector('#header'));
+// console.log(document.querySelector('.card-header'));
+// console.log(document.querySelector('div'));
+// console.log(document.querySelector('li').style.color='red');
+// console.log(document.querySelector('li:last-child').style.color='blue');
+// console.log(document.querySelector('li:nth-child(2)').style.color='yellow');
+// console.log(document.querySelector('li:nth-child(3)').textContent='task item');
 
 
-//document.querySelector('li').className= 'list-group-item list-group-item-primary';
+// //document.querySelector('li').className= 'list-group-item list-group-item-primary';
 
-document.querySelector('li').classList.add('active');
-
-
-
-
-
+// document.querySelector('li').classList.add('active');
 
 
 
 
 
 // Multiple Elements
+
+//class name
+//document.getElementByClassName()
+
+let val;
+//val = document.getElementsByClassName('list-group-item');
+// val=document.getElementsByClassName('list-group-item')[0];
+
+//val = val[2];
+
+// val[1].style.color='blue';
+// val[1].style.fontSize='25px';
+// val[2].textContent='new item';
+
+// for(i=0;i<val.length;i++){
+//     console.log(val[i].style.color='red');
+//     console.log(val[i].textContent='new item');
+// }
+
+//document.getElemenByTagName()
+
+// val = document.getElementsByTagName('li');
+// val = document.getElementsByTagName('a');//tum a tagler
+// val = document.getElementById('task-list');
+// val = val.getElementsByTagName('a');//ul altinda ki a tagler
+
+//document.querySelectorAll()
+val = document.querySelectorAll('li');
+
+// val.forEach(function(item){
+//     console.log(item);
+// });
+
+// val.forEach(function(item,index){
+//     item.textContent=`${index} - hello`;
+// });
+
+val = document.querySelectorAll('li:nth-child(even)');
+
+val.forEach(function(item){
+    item.style.background='#ccc';
+});
+
+
+
+
+console.log(val);
 
 
 

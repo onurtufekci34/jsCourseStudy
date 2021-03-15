@@ -1581,57 +1581,91 @@
 
 // console.log(val);
 
-let val;
+// let val;
 
-let list = document.querySelector('.list-group');
+// let list = document.querySelector('.list-group');
 
-val=list;
+// val=list;
 
-val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[0].nodeType;//text
-val = list.childNodes[1].nodeType;//element
-
-
-
-val = list.children;//html collection
-val = list.children[0];
-val = list.children[2];
-
-val = list.children[2].textContent='new item';
-val = list.children[3].children;
-
-val = list.firstChild;
-val = list.firstElementChild; 
-
-val = list.lastChild;
-val = list.lastElementChild;
-
-val = list.childElementCount;
-
-val = list.parentNode;
-val = list.parentElement;
-val = list.parentElement.parentElement;
+// val = list.childNodes;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[0].nodeType;//text
+// val = list.childNodes[1].nodeType;//element
 
 
-val = list.children[0].nextSibling;
-val = list.children[0].nextElementSibling;
 
-val = list.children[1].previousSibling;
-val = list.children[1].previousElementSibling;
+// val = list.children;//html collection
+// val = list.children[0];
+// val = list.children[2];
 
-console.log(val);
+// val = list.children[2].textContent='new item';
+// val = list.children[3].children;
 
-// for(let i = 0;i<list.children.length;i++){
-//     console.log(list.children[i]);
+// val = list.firstChild;
+// val = list.firstElementChild; 
+
+// val = list.lastChild;
+// val = list.lastElementChild;
+
+// val = list.childElementCount;
+
+// val = list.parentNode;
+// val = list.parentElement;
+// val = list.parentElement.parentElement;
+
+
+// val = list.children[0].nextSibling;
+// val = list.children[0].nextElementSibling;
+
+// val = list.children[1].previousSibling;
+// val = list.children[1].previousElementSibling;
+
+// console.log(val);
+
+// // for(let i = 0;i<list.children.length;i++){
+// //     console.log(list.children[i]);
+// // }
+
+// for(let i = 0;i<list.childNodes.length;i++){
+//     if(list.childNodes[i].nodeType===3){
+//         console.log(list.childNodes[i]);
+//     }
 // }
 
-for(let i = 0;i<list.childNodes.length;i++){
-    if(list.childNodes[i].nodeType===3){
-        console.log(list.childNodes[i]);
-    }
-}
+// Creating Elements
+
+
+// create element
+
+const li = document.createElement('li');
+
+// add class
+li.className='list-group-item list-group-item-secondary';
+
+//attribute
+li.setAttribute('title','new item');
+li.setAttribute('data-id','5');
+
+// text node
+
+const text = document.createTextNode('new item');
+li.appendChild(text);
+
+const a = document.createElement('a');
+a.setAttribute('href','#');
+a.className='delete-item float-right';
+a.innerHTML='<i class="fas fa-times"></i>';
+
+// append a to li
+li.appendChild(a);
+
+
+// append li to ul
+
+document.querySelector('#task-list').appendChild(li);
+
+console.log(li);
 
 
 

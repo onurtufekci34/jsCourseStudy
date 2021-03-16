@@ -1638,34 +1638,97 @@
 
 // create element
 
-const li = document.createElement('li');
+// const li = document.createElement('li');
 
-// add class
-li.className='list-group-item list-group-item-secondary';
+// // add class
+// li.className='list-group-item list-group-item-secondary';
 
-//attribute
-li.setAttribute('title','new item');
-li.setAttribute('data-id','5');
+// //attribute
+// li.setAttribute('title','new item');
+// li.setAttribute('data-id','5');
 
-// text node
+// // text node
 
-const text = document.createTextNode('new item');
-li.appendChild(text);
+// const text = document.createTextNode('new item');
+// li.appendChild(text);
 
-const a = document.createElement('a');
-a.setAttribute('href','#');
-a.className='delete-item float-right';
-a.innerHTML='<i class="fas fa-times"></i>';
+// const a = document.createElement('a');
+// a.setAttribute('href','#');
+// a.className='delete-item float-right';
+// a.innerHTML='<i class="fas fa-times"></i>';
 
-// append a to li
-li.appendChild(a);
+// // append a to li
+// li.appendChild(a);
 
 
 // append li to ul
 
-document.querySelector('#task-list').appendChild(li);
+// document.querySelector('#task-list').appendChild(li);
 
-console.log(li);
+// console.log(li);
+
+const taskList = document.querySelector('#task-list');
+
+//** */ removing element
+
+//taskList.remove();
+//taskList.childNodes[7].remove();
+//taskList.children[0].remove();
+
+//taskList.removeChild(taskList.children[3]);
+
+
+//** removing attribute
+//taskList.children[0].removeAttribute('class');
+
+// for(let i=0;i<taskList.children.length;i++){
+//     taskList.children[i].removeAttribute('class');
+// }
+
+
+// ** replacing element
+
+// const carHeader = document.querySelector('.card-header');
+
+
+// create a element
+
+// const h2 = document.createElement('h2');
+// h2.setAttribute('class','card-header');
+// h2.appendChild(document.createTextNode('My List'));
+
+// const parent = document.querySelector('.card');
+// parent.replaceChild(h2,carHeader);
+//console.log(carHeader);
+
+
+//** Classes 
+
+let val;
+
+link = taskList.children[0].children[0];
+
+//val = link.className;
+//val = link.classList;
+//val = link.classList[0];
+//val = link.classList[1];
+
+link.classList.add('new');
+link.classList.remove('new');
+
+// Attributes
+val = link.getAttribute('class');
+
+
+
+
+console.log(val);
+
+
+
+
+
+
 
 
 
